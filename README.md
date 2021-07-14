@@ -1,1 +1,1 @@
-Coding challenges
+Coding Challenges / Algorithm Problems
