@@ -15,6 +15,8 @@ def Dijkstra(s):
     while len(pq) > 0:
         top = heapq.heappop(pq)
         u, w = top.id, top.dist
+        if dist[u] < w:     # We already had a better route to u -> continue
+            continue
         for v in graph[u]:
             if w + v.dist < dist[v.id]:
                 dist[v.id] = w + v.dist
