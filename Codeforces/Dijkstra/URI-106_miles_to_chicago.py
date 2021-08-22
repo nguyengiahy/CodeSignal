@@ -8,7 +8,7 @@ def Dijkstra(s):
 
     while len(pq) > 0:
         w, u = heapq.heappop(pq)
-        if w > dist[u]:
+        if w < dist[u]:
             continue
         for v, weight in graph[u]:
             if w * weight > dist[v]:
